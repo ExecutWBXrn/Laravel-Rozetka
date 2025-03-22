@@ -8,7 +8,7 @@ class Job extends Model
 {
     use HasFactory;
     protected $table = 'jobs_listening';
-    protected $fillable = ['title','description'];
+    protected $guarded = '';
 
     public function employer(){
         return $this->belongsTo(Employer::class, 'employer_id');
